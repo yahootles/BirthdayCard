@@ -219,22 +219,17 @@ public class FormBirthdayCard extends javax.swing.JFrame {
         date = birthdayInput.getText();
         
         pBar++;
-        System.out.println(name + date);
-
 //        progressBar.setIndeterminate(true);
 
             //TimeUnit.SECONDS.sleep(10);
         progressBar.setValue(pBar);
-        if(pBar >= 100 && (name != "" && date != "")){
+        if(pBar >= 100){
             progressBar.setIndeterminate(false);
 //          progressBar.setValue((int)pBar);
             outputLabel.setText(name + "\'s birthday is " + date + "!");
             nameInput.setText("");
             birthdayInput.setText("");
             pBar = 0;
-        }else{
-            pBar = 0;
-            progressBar.setValue(pBar);
         }
     }//GEN-LAST:event_enterButtonActionPerformed
 
